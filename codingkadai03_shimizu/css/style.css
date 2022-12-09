@@ -44,6 +44,7 @@ img {
 div {
   max-width: 960px;
   background-color: #eeeeee;
+  margin: 0 auto;
 }
 
 h1 {
@@ -82,8 +83,11 @@ p {
 }
 
 @media screen and (max-width: 400px) {
-  .wrap {
+  ul {
     display: block;
+  }
+
+  li {
     max-width: 100%;
   }
 }
