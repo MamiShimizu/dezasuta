@@ -21,6 +21,7 @@ p {
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
+  font-feature-settings: "palt";
 }
 
 a {
@@ -60,7 +61,7 @@ img {
   box-sizing: border-box;
 }
 
-.header_logp {
+.header_logo {
   width: 220px;
 }
 
@@ -91,87 +92,169 @@ main {
   align-items: center;
 }*/
 
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*リード文*/
+
 .lead {
   font-size: 30px;
   text-align: center;
   padding-top: 107px;
-  padding-bottom: 57px;
+  padding-bottom: 90px;
 }
 
-.main_wrap h2 {
+.lead p:nth-child(2) {
+  margin-top: 50px;
   font-size: 82px;
   text-align: center;
-  padding-bottom: 44px;
-  line-height: 1.65;
+  line-height: 1.17;
+  letter-spacing: 0.1em;
 }
 
-.main_wrap p {
+.lead p:nth-child(3) {
+  margin-top: 30px;
   font-size: 23px;
   text-align: center;
-  padding-bottom: 99px;
+  line-height: 1.65;
+  letter-spacing: 0.1em;
 }
 
-#abut_us {
+/*ABOUT US*/
+
+.about_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-#abut_us h2 {
-  padding-left: 80px;
+.about_img {
+  width: 50%;
 }
 
-.abut_us img {
-  width: 500px;
-  height: 560px;
+.about_img img {
+  border-bottom-right-radius: 80px;
+}
+.about_text {
+  width: 41%;
+  padding: 10px;
 }
 
-.abut_us h2 {
+.about h2 {
+  width: 272px;
+}
+
+.about_sub_heading {
+  margin-top: 40px;
   font-size: 44px;
+  line-height: 1.38;
 }
 
-.abut_us p {
+.about_desc {
+  margin-top: 20px;
   font-size: 16px;
+  line-height: 1.62;
 }
 
-.manu ul {
+/*MENU*/
+.menu {
+  padding-top: 105px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu h2 {
+  width: 150px;
+  margin: 0 auto 40px;
+}
+
+.menu ul {
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
-.manu h3 {
+.menu ul li {
+  width: 30%;
+}
+
+.menu ul li img {
+  border-top-right-radius: 40px;
+}
+
+.menu h3 {
+  margin-top: -12px;
+  margin-left: 14px;
   font-size: 38px;
-  color: red;
+  color: #d30202;
+  font-weight: normal;
 }
 
-.manu p {
+.menu p {
+  margin-top: 15px;
   font-size: 17px;
+  line-height: 1.47;
 }
 
-.gallary img {
-  margin: 0 auto;
-  padding-top: 26px;
-  padding-bottom: 72px;
+/*GALLERY*/
+
+.gallery {
+  padding-top: 90px;
 }
-.gallary ul {
+
+.gallery h2 {
+  width: 245px;
+  margin: 0 auto 15px;
+}
+
+.gallery ul {
   display: flex;
 }
 
+/*EVENT*/
 .event {
-  width: 1000px;
-  height: 200px;
-  margin: 0 auto;
-  padding: 20px;
+  padding-top: 70px;
+}
+
+.event h2 {
+  width: 173px;
+  margin: 0 auto 40px;
+}
+
+.event_list {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 40px;
   border: solid 3.7px #4f260b;
   background-color: #fff;
 }
 
 .event ul {
-  text-align: center;
   font-size: 23px;
-  padding: 40px 158px;
+}
 
+.event ul li + li {
+  margin-top: 20px;
+}
+
+.event ul li time {
+  margin-right: 55px;
+}
+.event ul li a {
   text-decoration: underline;
+}
+
+/*ACCESS*/
+.access {
+  padding-top: 70px;
+}
+
+.access h2 {
+  width: 213px;
+  margin: 0 auto 45px;
 }
 
 .map iframe {
@@ -180,21 +263,122 @@ main {
   height: 470px;
 }
 
-.footer_wrap {
+/*FOOTER*/
+
+.footer_block {
   display: flex;
-  justify-content: center;
-  margin-top: 82px;
+  margin-top: 77px;
 }
+
 .footer_logo {
-  width: 221px;
+  width: 226px;
+  margin-left: 10px;
 }
-.info {
+
+.footer_info {
   font-size: 20px;
   color: black;
   margin-left: 65px;
+  line-height: 1.95;
 }
 
-.copyright {
+.footer_copy {
+  margin-top: 70px;
+  margin-bottom: 70px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
+  color: black;
+}
+
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav {
+    display: none;
+  }
+
+  /*ハンバーガー*/
+  .sp_btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .sp_btn span {
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+
+  /*ハンバーガー閉じる*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  /*ハンバーガーメニュー */
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  }
 }
