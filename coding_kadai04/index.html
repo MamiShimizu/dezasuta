@@ -23,7 +23,7 @@
 
             <div>
                 <picture>
-                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
                     <img src="images/pc_first-100.jpg" alt="店内の様子">
                 </picture>
             </div>
@@ -39,21 +39,21 @@
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="about_us">ABOUT US</a></li>
-                    <li><a href="menu">MENU</a></li>
-                    <li><a href="gallery">GALLERY</a></li>
-                    <li><a href="event">EVENT</a></li>
-                    <li><a href="access">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="about_us">ABOUT US</a></li>
-                    <li><a href="menu">MENU</a></li>
-                    <li><a href="gallery">GALLERY</a></li>
-                    <li><a href="event">EVENT</a></li>
-                    <li><a href="access">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,19 +74,20 @@
         </div>
 
 
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="about_container">
-                <div class="about_img pc_only">
-                    <img src="images/pc_about-100.jpg" alt="コーヒーカップ">
-                </div>
-                <div class="about_img sp_only">
-                    <img src="images/about_us@2x-100.jpg" alt="コーヒーカップ">
-                </div>
-
                 <div class="about_text">
-                    <h2 class="pc_only">
+                    <h2>
                         <img src="images/about_us@2x.png" alt="ABOUT US">
                     </h2>
+
+                    <div>
+                        <picture>
+                            <source srcset="images/about_us@2x-100.jpg" media="(max-width: 767px)">
+                            <img src="images/pc_about-100.jpg" alt="コーヒーカップ">
+                        </picture>
+                    </div>
+
                     <p class="about_sub_heading">
                         私たちが提供する<br>
                         こだわりのコーヒー</p>
@@ -103,7 +104,7 @@
         </section>
 
 
-        <section class="menu section">
+        <section class="menu section" id="menu">
             <h2><img src="images/menu@2x.png" alt="MENU"></h2>
             <ul>
                 <li>
@@ -144,21 +145,20 @@
             </ul>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
 
             <h2><img src="images/gallery@2x.png" alt="GALLERY"></h2>
-            <img class="pc_only" src="images/mobile_gallery-100.jpg" alt="GALLERY">
-            <ul>
-                <li><img src="images/pc_gallary_05-100.jpg" alt="写真１"></li>
-                <li><img src="images/pc_gallary_04-100.jpg" alt="写真２"></li>
-                <li><img src="images/pc_gallary_03-100.jpg" alt="写真３"></li>
-                <li><img src="images/pc_gallary_02-100.jpg" alt="写真４"></li>
-                <li><img src="images/pc_gallary_01-100.jpg" alt="写真５"></li>
-            </ul>
-            <img class="sp_only" src="images/mobile_gallery-100.jpg" alt="写真１">
+            <div class="gallery_slider">
+                <img src="images/pc_gallary_05-100.jpg" alt="写真１">
+                <img src="images/pc_gallary_04-100.jpg" alt="写真２">
+                <img src="images/pc_gallary_03-100.jpg" alt="写真３">
+                <img src="images/pc_gallary_02-100.jpg" alt="写真４">
+                <img src="images/pc_gallary_01-100.jpg" alt="写真５">
+                <img src="images/pc_gallary_01-100.jpg" alt="写真５">
+            </div>
         </section>
 
-        <section class="event section">
+        <section class="event section" id="event">
             <h2><img src="images/event@2x.png" alt="EVENT"></h2>
             <div class="event_list">
                 <ul>
@@ -219,6 +219,24 @@
                 dots: true,
                 arrows: false,
             });
+
+            $('.gallery_slider').slick({
+                isFinite: true,
+                arrows: true,
+                speed: 300,
+                slidesToScroll: 5,
+                slidesToScroll: 3,
+
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+
+
+                    }
+                }]
+            })
         });
 
     </script>
