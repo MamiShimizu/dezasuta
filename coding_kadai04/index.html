@@ -76,16 +76,15 @@
 
         <section class="about section" id="about">
             <div class="about_container">
+                <div class="about_img">
+                    <img src="images/pc_about-100.jpg" alt="コーヒーカップ">
+                </div>
                 <div class="about_text">
                     <h2>
                         <img src="images/about_us@2x.png" alt="ABOUT US">
                     </h2>
-
-                    <div>
-                        <picture>
-                            <source srcset="images/about_us@2x-100.jpg" media="(max-width: 767px)">
-                            <img src="images/pc_about-100.jpg" alt="コーヒーカップ">
-                        </picture>
+                    <div class="about_img_sp">
+                        <img src="images/about_us@2x-100.jpg" alt="コーヒーカップ">
                     </div>
 
                     <p class="about_sub_heading">
@@ -170,7 +169,7 @@
             </div>
         </section>
 
-        <section class="access">
+        <section class="access" id="access">
             <h2><img src="images/access@2x.png" alt="ACCESS"></h2>
             <div class="map">
                 <iframe
@@ -224,7 +223,7 @@
                 isFinite: true,
                 arrows: true,
                 speed: 300,
-                slidesToScroll: 5,
+                slidesToShow: 5,
                 slidesToScroll: 3,
 
                 responsive: [{

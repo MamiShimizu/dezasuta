@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <meta name="description" content="ポートフォリオ">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <picture></picture>
+        </div>
+        <nav class="pc_nav">
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="lead">
+            <p>チームの一員であること<br>
+                繋がる先があることを大切に</p>
+        </div>
+
+        <section class="about section" id="about">
+            <div class="about_container">
+
+                <picture></picture>
+
+                <p>Mami Shimizu</p>
+                <p>長野県出身<br>
+                    青空広がる緑豊かな自然の中で育ちました。</p>
+                <div class="about_skill">
+                    <p>SKILL</p>
+                    <div class="inner">
+                        <img src="images/skill_01.png" alt="coding">
+                        <p>HTML/CSS</p>
+                        <img src="images/skill_02.png" alt="figma">
+                        <p>Figma</p>
+                        <img src="images/skill_03.png" alt="illustrator">
+                        <p>Illustrator</p>
+                        <img src="images/skill_04.png" alt="photoshop">
+                        <p>Photoshop</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="works section" id="works">
+            <img src="" alt="work1">
+            <p>広告バナー</p>
+            <img src="" alt="work2">
+            <p>広告バナー</p>
+            <img src="" alt="work3">
+            <p>広告バナー</p>
+            <img src="" alt="work4">
+            <p>広告バナー</p>
+            <img src="" alt="work5">
+            <p>コーポレートサイト</p>
+            <img src="" alt="work6">
+            <p>コーポレートサイト</p>
+        </section>
+
+
+        <section class="contact" id="contact">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©Mami Shimizu</p>
+    </footer>
+
+    <div class="pagetop">
+        <img src="" alt="pagetop">
+    </div>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            });
+
+        })
+    </script>
+
+
+</body>
+
+</html>
