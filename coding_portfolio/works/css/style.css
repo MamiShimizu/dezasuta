@@ -48,84 +48,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/*ポートフォリオ*/
-
-/*header*/
-header {
-  background-color: #e6e6e6;
-}
-
-.header_menu {
-  border-width: 4px;
-  border-color: black;
-  border-bottom-style: solid;
-}
-
-.pc_nav ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.pc_nav ul li {
-  width: 105px;
-  margin-right: 55px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-  text-align: center;
-}
-
-/*リード文*/
-.lead {
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-/*ABOUT*/
-.about_container {
-  border: 5px solid black;
-  width: 80%;
-  margin: 0 auto;
-  background-color: white;
-  margin-top: 50px;
-}
-
-.name {
-  font-size: 16px;
-}
-
-.profile {
-  font-size: 14px;
-}
-
-.about_skill p {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.skill_box ul {
-  margin-top: 30px;
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.skill_box img {
-  width: 200px;
-  height: 200px;
-}
-
-.skill_box p {
-  font-size: 14px;
-  margin-top: 25px;
-}
-
-/*works*/
 .works_container {
   border: 5px solid black;
   width: 80%;
@@ -134,10 +56,14 @@ header {
   background-color: white;
 }
 
-.works ul {
+.works_block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.works_box {
+  width: calc(100% / 3);
 }
 
 .works_box img {
@@ -151,37 +77,6 @@ header {
   font-weight: bold;
   text-align: center;
 }
-
-/*contact*/
-.contact {
-  border: 5px solid black;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: white;
-}
-/*input[type="email"] {
-  padding: 10px;
-  width: 65%;
-  color: #999;
-  border: 1px solid #999;
-}
-textarea {
-  padding: 10px;
-  height: 100px;
-  color: #999;
-  font-size: 14px;
-  width: 65%;
-  border: 1px solid #999;
-}
-button {
-  background: #5250e0;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 0 5px;
-}*/
 
 /*footer*/
 .footer_copy {
@@ -249,6 +144,7 @@ button {
 .sp_btn.open span {
   background: transparent;
 }
+
 .sp_btn.open span::before {
   bottom: 0;
   transform: rotate(45deg);
@@ -284,23 +180,4 @@ button {
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-}
-
-/*sp*/
-.sp_only {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .sp_only {
-    display: block;
-  }
-
-  .pc_only {
-    display: none;
-  }
-
-  /*リード文*/
-  /*ABOUT */
-  /*WORKS*/
 }

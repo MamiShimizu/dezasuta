@@ -13,12 +13,24 @@
 
 <body>
     <header id="header">
-        <div>
-            <picture></picture>
-        </div>
         <nav class="pc_nav">
+            <div class="header_menu">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div>
+                <picture>
+                    <img src="images/top-100.jpg" alt="トップページ">
+                </picture>
+            </div>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
             <ul>
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#about">ABOUT US</a></li>
                 <li><a href="#works">WORKS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -36,53 +48,100 @@
 
                 <picture></picture>
 
-                <p>Mami Shimizu</p>
-                <p>長野県出身<br>
+                <p class="name">Mami Shimizu</p>
+                <p class="profile">
+                    長野県出身<br>
                     青空広がる緑豊かな自然の中で育ちました。</p>
                 <div class="about_skill">
                     <p>SKILL</p>
-                    <div class="inner">
-                        <img src="images/skill_01.png" alt="coding">
-                        <p>HTML/CSS</p>
-                        <img src="images/skill_02.png" alt="figma">
-                        <p>Figma</p>
-                        <img src="images/skill_03.png" alt="illustrator">
-                        <p>Illustrator</p>
-                        <img src="images/skill_04.png" alt="photoshop">
-                        <p>Photoshop</p>
+
+                    <div class="skill_box">
+                        <ul>
+                            <li>
+                                <img src="images/skill_01.png" alt="coding">
+                                <p>HTML/CSS</p>
+                            </li>
+                            <li>
+                                <img src="images/skill_02.png" alt="figma">
+                                <p>Figma</p>
+                            </li>
+                            <li>
+                                <img src="images/skill_03.png" alt="illustrator">
+                                <p>Illustrator</p>
+                            </li>
+                            <li>
+                                <img src="images/skill_04.png" alt="photoshop">
+                                <p>Photoshop</p>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="works section" id="works">
-            <img src="" alt="work1">
-            <p>広告バナー</p>
-            <img src="" alt="work2">
-            <p>広告バナー</p>
-            <img src="" alt="work3">
-            <p>広告バナー</p>
-            <img src="" alt="work4">
-            <p>広告バナー</p>
-            <img src="" alt="work5">
-            <p>コーポレートサイト</p>
-            <img src="" alt="work6">
-            <p>コーポレートサイト</p>
+            <div class="works_container">
+                <div class="works_box">
+                    <ul>
+                        <li>
+                            <img src="images/works_01-100.jpg" alt="work1">
+                            <p>広告バナー</p>
+                        </li>
+                        <li>
+                            <img src="images/works_02-100.jpg" alt="work2">
+                            <p>広告バナー</p>
+                        </li>
+                        <li>
+                            <img src="images/works_03-100.jpg" alt="work3">
+                            <p>広告バナー</p>
+                        </li>
+                        <li>
+                            <img src="images/works_04-100.jpg" alt="work4">
+                            <p>広告バナー</p>
+                        </li>
+                        <li>
+                            <img src="images/works_05-100.jpg" alt="work5">
+                            <p>コーポレートサイト</p>
+                        </li>
+
+                        <li><img src="images/works_06-100.jpg" alt="work6">
+                            <p>コーポレートサイト</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
 
         <section class="contact" id="contact">
-
+            <div class="contact_inner">
+                <h2>CONTANT</h2>
+                <p>※は必須項目です</p>
+                <div class="contact_form">
+                    <form>
+                        <label for="name">お名前</label>
+                        <input id="name" type="text" name="name">
+                        <label for="furigana">フリガナ</label>
+                        <input id="furigana" type="text" name="name">
+                        <label for="email">メールアドレス</label>
+                        <input id="email" type="text" name="name">
+                        <label for="msg">お問い合わせ内容</label>
+                        <textarea id="msg" name="name"></textarea>
+                        <button type="submit" name="button" value="送信"></button>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>©Mami Shimizu</p>
+        <p class="footer_copy">©Mami Shimizu</p>
     </footer>
 
     <div class="pagetop">
-        <img src="" alt="pagetop">
+        <img src="images/logo_pagetop.png" alt="pagetop">
     </div>
 
     <script>
