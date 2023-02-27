@@ -85,27 +85,57 @@
                 <div class="works_box">
                     <ul>
                         <li>
-                            <img src="images/works_01-100.jpg" alt="work1">
+                            <div class="pc_only">
+                                <img src="images/works_01-100.jpg" alt="work1">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/ works_01_sp@2x-100.jpg" alt="work1">
+                            </div>
                             <p>広告バナー</p>
                         </li>
                         <li>
-                            <img src="images/works_02-100.jpg" alt="work2">
+                            <div class="pc_only">
+                                <img src="images/works_02-100.jpg" alt="work2">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/works_02_sp@2x-100.jpg" alt="work2">
+                            </div>
                             <p>広告バナー</p>
                         </li>
                         <li>
-                            <img src="images/works_03-100.jpg" alt="work3">
+                            <div class="pc_only">
+                                <img src="images/works_03-100.jpg" alt="work3">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/works_03_sp@2x-100.jpg" alt="work3">
+                            </div>
                             <p>広告バナー</p>
                         </li>
                         <li>
-                            <img src="images/works_04-100.jpg" alt="work4">
+                            <div class="pc_only">
+                                <img src="images/works_04-100.jpg" alt="work4">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/works_04_sp@2x-100.jpg" alt="work4">
+                            </div>
                             <p>広告バナー</p>
                         </li>
                         <li>
-                            <img src="images/works_05-100.jpg" alt="work5">
+                            <div class="pc_only">
+                                <img src="images/works_05-100.jpg" alt="work5">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/works_05_sp@2x-100.jpg" alt="work5">
+                            </div>
                             <p>コーポレートサイト</p>
                         </li>
-
-                        <li><img src="images/works_06-100.jpg" alt="work6">
+                        <li>
+                            <div class="pc_only">
+                                <img src="images/works_06-100.jpg" alt="work6">
+                            </div>
+                            <div class="sp_only">
+                                <img src="images/works_06_sp@2x-100.jpg" alt="work6">
+                            </div>
                             <p>コーポレートサイト</p>
                         </li>
                     </ul>
@@ -115,21 +145,31 @@
 
 
         <section class="contact" id="contact">
-            <div class="contact_inner">
-                <h2>CONTANT</h2>
-                <p>※は必須項目です</p>
+            <div class="contact_container">
+                <p>CONTANT</p>
                 <div class="contact_form">
-                    <form>
+                    <div class="contact_sentence">
                         <label for="name">お名前</label>
+                        <p class="must">必須</p>
                         <input id="name" type="text" name="name">
+                    </div>
+                    <div class="contact_sentence">
                         <label for="furigana">フリガナ</label>
+                        <p class="must">必須</p>
                         <input id="furigana" type="text" name="name">
+                    </div>
+                    <div class="contact_sentence">
                         <label for="email">メールアドレス</label>
+                        <p class="must">必須</p>
                         <input id="email" type="text" name="name">
+                    </div>
+                    <div class="contact_sentence">
                         <label for="msg">お問い合わせ内容</label>
+                        <p class="must">必須</p>
                         <textarea id="msg" name="name"></textarea>
-                        <button type="submit" name="button" value="送信"></button>
-                    </form>
+                    </div>
+                    <button class="btn">送信</button>
+
                 </div>
             </div>
         </section>
