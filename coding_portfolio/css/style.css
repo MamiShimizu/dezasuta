@@ -8,19 +8,24 @@ body {
   background-color: #fafafa;
 }
 
+html,
+body,
 h1,
 h2,
 h3,
+p,
+dl,
+dt,
+dd,
 ul,
-li,
-p {
+li {
   margin: 0;
   margin: 0;
   margin: 0;
   padding: 0;
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
-  color: #4c4c4c;
+  color: #333;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-feature-settings: "palt";
@@ -52,11 +57,17 @@ html {
 
 /*header*/
 header {
-  background-color: #e6e6e6;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  border-bottom: 2px solid #000;
 }
 
 .header_menu {
-  border-width: 4px;
+  padding: 30px 0 15px;
+  border-width: 2px;
   border-color: black;
   border-bottom-style: solid;
 }
@@ -68,51 +79,111 @@ header {
 
 .pc_nav ul li {
   width: 105px;
-  margin-right: 55px;
   color: black;
-  font-weight: bold;
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   text-align: center;
 }
 
+.pc_nav ul li + li {
+  margin-left: 55px;
+}
+
+/*共通*/
+.section {
+  border: 5px solid black;
+  border-radius: 35px;
+  max-width: 1000px;
+  margin: 0 auto 120px;
+  background-color: #fff;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  margin: -25px auto 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.heading--about {
+  background-color: #db6949;
+}
+
+.heading--works {
+  background-color: #e2c149;
+}
+
+.heading--contact {
+  background-color: #59a1d0;
+}
+
+/*ファーストビュー*/
+.fv img {
+  width: 100%;
+}
+
 /*リード文*/
 .lead {
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
-  margin-top: 50px;
+  line-height: 1.6;
+  margin: 145px 0;
 }
 
 /*ABOUT*/
-.about_container {
-  border: 5px solid black;
-  width: 80%;
-  margin: 0 auto;
-  background-color: white;
-  margin-top: 50px;
+.about_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
 }
 
-.name {
+.about_img {
+  margin-right: 100px;
+}
+
+.about_name {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.about_desk {
   font-size: 16px;
+  line-height: 1.4;
 }
 
-.profile {
-  font-size: 14px;
-}
-
-.about_skill p {
-  margin-top: 50px;
+.about_skill h3 {
+  display: block;
+  width: 80px;
+  padding: 5px 10px;
+  margin: 0 auto 50px;
+  border-bottom: 2px solid #000;
   text-align: center;
 }
 
+.skill_box {
+  max-width: 512px;
+  margin: 0 auto;
+}
+
 .skill_box ul {
-  margin-top: 30px;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.skill_box ul li {
+  width: 200px;
+  margin-bottom: 100px;
+}
+
+.skill_box ul li :nth-child(odd) {
+  margin-right: 110px;
 }
 
 .skill_box img {
@@ -126,26 +197,22 @@ header {
 }
 
 /*works*/
-.works_container {
-  border: 5px solid black;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: white;
-}
 
 .works_box {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.works ul {
+.works_box ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
+.works_box ul li {
+  width: calc(100% / 3);
+  margin-bottom: 100px;
+}
 .works_box img {
   width: 200px;
   height: 200px;
@@ -155,33 +222,32 @@ header {
 .works_box p {
   font-size: 14px;
   font-weight: bold;
+  margin-top: 15px;
   text-align: center;
 }
 
 /*contact*/
-.contact {
-  border: 5px solid black;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: white;
-}
 
-.contact_container {
+.contact_form {
   text-align: center;
-  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .contact_sentence {
-  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
 }
 
-.must {
+.contact_sentence label span {
   font-size: 14px;
-  width: 48px;
-  margin-left: 8px;
-  text-align: center;
   padding: 2px 0 3px 0;
+}
+
+.input_text {
+  width: 100%;
+  margin-top: 10px;
 }
 
 /*input[type="email"] {
@@ -189,23 +255,22 @@ header {
   width: 65%;
   color: #999;
   border: 1px solid #999;
-}
+}*/
+
 textarea {
-  padding: 10px;
-  height: 100px;
-  color: #999;
-  font-size: 14px;
-  width: 65%;
-  border: 1px solid #999;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
+
 button {
-  background: #5250e0;
+  background: #59a1d0;
   color: white;
   font-size: 16px;
-  font-weight: bold;
   padding: 10px 20px;
-  margin: 0 5px;
-}*/
+  margin: 50px;
+}
 
 /*footer*/
 .footer_copy {
@@ -228,86 +293,92 @@ button {
   display: none;
 }
 
-/*ハンバーガー*/
-.sp_btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  display: block;
-  height: 23px;
-  cursor: pointer;
-  z-index: 2;
-}
+@media screen and (max-width: 1100px) {
+  .pc_nav {
+    display: none;
+  }
 
-.sp_btn span {
-  position: relative;
-  top: 10px;
-  display: block;
-  width: 33px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: #fff;
-  transition: 0.3s;
-}
+  /*ハンバーガー*/
+  .sp_btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+  }
 
-.sp_btn span::before,
-.sp_btn span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 33px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: #fff;
-  transition: 0.3s;
-}
+  .sp_btn span {
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #000;
+    transition: 0.3s;
+  }
 
-.sp_btn span::before {
-  bottom: 10px;
-}
-.sp_btn span::after {
-  top: 10px;
-}
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #000;
+    transition: 0.3s;
+  }
 
-/*ハンバーガー閉じる*/
-.sp_btn.open span {
-  background: transparent;
-}
-.sp_btn.open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
 
-.sp_btn.open span::after {
-  top: 0;
-  transform: rotate(135deg);
-}
+  /*ハンバーガー閉じる*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
 
-/*ハンバーガーメニュー */
-.sp_nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-}
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
 
-.sp_nav ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+  /*ハンバーガーメニュー */
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
 
-.sp_nav ul li {
-  padding: 20px;
-  color: #fff;
-  font-size: 18px;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  }
 }
 
 /*sp*/
@@ -325,6 +396,105 @@ button {
   }
 
   /*リード文*/
+  .lead {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 100px 0;
+  }
+
   /*ABOUT */
-  /*WORKS*/
+  .about_flex {
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+  }
+  .about_img {
+    margin: 0 auto;
+  }
+
+  .about_name {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .about_desk {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .about_skill h3 {
+    display: block;
+    width: 80px;
+    padding: 5px 10px;
+    margin: 0 auto 50px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+  }
+
+  .skill_box {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .skill_box ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill_box ul li {
+    width: 200px;
+    margin-bottom: 100px;
+  }
+
+  .skill_box ul li :nth-child(odd) {
+    margin-right: 110px;
+  }
+
+  .skill_box img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skill_box p {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+
+  /*works*/
+
+  /*.works_box {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .works_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .works_box ul li {
+    width: calc(100% / 3);
+    margin-bottom: 100px;
+  }*/
+
+  .works_box img {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+  }
+
+  .works_box p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .pagetop {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 100px;
+  }
 }
