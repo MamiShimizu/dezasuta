@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオ</title>
-    <meta name="description" content="ポートフォリオ">
+    <title>Portfolio</title>
+    <meta name="description" content="ShimizuMamiのポートフォリオ">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -46,7 +46,7 @@
             <h2 class="heading heading--about">ABOUT</h2>
             <div class="about_flex">
                 <div class="about_img">
-                    <img src="" alt="" style="width: 250px;height: 250px;background :#b3b3b3;border-radius: 99rem;">
+                    <img src="images/kari_about@2x.png" alt="顔">
                 </div>
                 <div class="about_profile">
                     <div class="about_name">
@@ -142,6 +142,15 @@
                         </div>
                         <p>コーポレートサイト</p>
                     </li>
+                    <li>
+                        <div class="pc_only">
+                            <img src="images/works_07-100.jpg" alt="work7">
+                        </div>
+                        <div class="sp_only">
+                            <img src="images/works_07_sp@2x-100.jpg" alt="work7">
+                        </div>
+                        <p>コーポレートサイト</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -149,33 +158,36 @@
 
         <section class="contact section" id="contact">
             <h2 class="heading heading--contact">CONTACT</h2>
-            <div class="contact_form">
-                <div class="contact_sentence">
-                    <label for="name">お名前
-                        <span>必須</span>
-                    </label>
-                    <input class="input_text" type="text" name="name">
+            <form
+                action="action=https://docs.google.com/forms/u/0/d/e/1FAIpQLSdXGQLghnNfMEqWzNtjsR-7WGbVN1TqiaQcWI0ZORoCXc2gSQ/formResponse">
+                <div class="contact_form">
+                    <div class="contact_sentence">
+                        <label for="name">お名前
+                            <span>必須</span>
+                        </label>
+                        <input class="input_text" type="text" name="entry.366340186" required>
+                    </div>
+                    <div class="contact_sentence">
+                        <label for="furigana">フリガナ
+                            <span>必須</span>
+                        </label>
+                        <input class="input_text" type="text" name="entry.636114824" required>
+                    </div>
+                    <div class="contact_sentence">
+                        <label for="email">メールアドレス
+                            <span>必須</span>
+                        </label>
+                        <input class="input_text" type="text" name="entry.1072019112" required>
+                    </div>
+                    <div class="contact_sentence">
+                        <label for="msg">お問い合わせ内容
+                            <span>必須</span>
+                        </label>
+                        <textarea class="message" name="entry.785370535"></textarea>
+                    </div>
+                    <button class="btn">送信</button>
                 </div>
-                <div class="contact_sentence">
-                    <label for="furigana">フリガナ
-                        <span>必須</span>
-                    </label>
-                    <input class="input_text" type="text" name="name">
-                </div>
-                <div class="contact_sentence">
-                    <label for="email">メールアドレス
-                        <span>必須</span>
-                    </label>
-                    <input class="input_text" type="text" name="name">
-                </div>
-                <div class="contact_sentence">
-                    <label for="msg">お問い合わせ内容
-                        <span>必須</span>
-                    </label>
-                    <textarea class="message" name="name"></textarea>
-                </div>
-                <button class="btn">送信</button>
-            </div>
+            </form>
         </section>
 
     </main>
@@ -185,6 +197,7 @@
     </footer>
 
     <div class="pagetop">
+        <a href="#header"></a>
         <img src="images/logo_pagetop.png" alt="pagetop">
     </div>
 
